@@ -1,0 +1,69 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>smartsheet-csharp-sdk</AssemblyName>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <BaseIntermediateOutputPath>obj.dotnet.core</BaseIntermediateOutputPath>
+    <Product />
+    <Company />
+    <Authors />
+    <RootNamespace>Smartsheet_csharp_sdk</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="docs\**" />
+    <Compile Remove="documentation\**" />
+    <Compile Remove="GTM\**" />
+    <Compile Remove="IntegrationTestSDK\**" />
+    <Compile Remove="packages\**" />
+    <Compile Remove="Sample\**" />
+    <Compile Remove="TestSDKMockAPI\**" />
+    <EmbeddedResource Remove="docs\**" />
+    <EmbeddedResource Remove="documentation\**" />
+    <EmbeddedResource Remove="GTM\**" />
+    <EmbeddedResource Remove="IntegrationTestSDK\**" />
+    <EmbeddedResource Remove="packages\**" />
+    <EmbeddedResource Remove="Sample\**" />
+    <EmbeddedResource Remove="TestSDKMockAPI\**" />
+    <None Remove="docs\**" />
+    <None Remove="documentation\**" />
+    <None Remove="GTM\**" />
+    <None Remove="IntegrationTestSDK\**" />
+    <None Remove="packages\**" />
+    <None Remove="Sample\**" />
+    <None Remove="TestSDKMockAPI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+    <None Remove="ADVANCED.md" />
+    <None Remove="build.bat" />
+    <None Remove="CHANGELOG.md" />
+    <None Remove="LICENSE.txt" />
+    <None Remove="README.md" />
+    <None Remove="Smartsheet-csharp-sdk.nuspec" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NLog" Version="4.5.4" />
+    <PackageReference Include="NLog.Config" Version="4.5.4" />
+    <PackageReference Include="RestSharp" Version="106.2.2" />
+  </ItemGroup>
+
+</Project>
